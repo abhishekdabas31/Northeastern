@@ -2,6 +2,8 @@
 So the main question is how does our Brain work?
 This is one of the major questions in Neuroscience and Machine Learning!!! yet to be answered
 
+<img src="C:\Users\Abhishek\Desktop\My_Projects\Northeastern\CV.png" alt="My cool logo"/>
+
 ## Neural nets are suppose to mimic the way our brain works, but still i believe we are far being figuring out whether we can predict how our brain works!!
 
 Coming back to #Computer Vision, 
@@ -11,3 +13,44 @@ Computer Vision is mainly pattern prediction- we train our algorithms with some 
 If you feed an image of Dog to the machine, maybe Millions of images of Dogs, 
 the algorithm will try and figure out the different patterns of colors, different shapes in which it can be showed, distances, borders.
 When finished the computer will be able to use its experience when fed other unlabeled images of dogs
+
+Computers usually read image as its pattern of colors, which is usually a combination of 3 series - Red , Green , Blue (RGB)
+So basically each pixel has 3 additional value to store along with the position of pixel, that is its combination of RGB (Like 26 * 190 * 255)
+## Isnt that alot of information to store along within a picture!!
+## Just imagine when we feed thousands, or maybe millions of data to a machine for analysis!!
+
+# Evolution of Computer Vision 
+Ealier the for the same prediction of an image as mentioned above ( the Dog example)
+- a specific format of image was required
+-the system required an imput of information like distance between eyes, lips, legs etc etc...thats alot of key points that the system required 
+- mentioning all these key points on the picture that is fed to the system
+phheww!!! alot right???
+this involved alot of coding.
+After all this hard coding the application would finally compare the measurements provided to the measurements of the image already stored.
+The Error margin was still highhh!!!
+
+## Then Came Machine Learning
+It provded another approach of resolving this issue. With ML the developers no longer had to send every measurement of the image to the system.
+ML used statistical learning, Logical regression, Decision trees, Support Vector Machine(SVM) to detect patterns andclassify images.
+For instance:- years ago ML Engineers were able to predict breast cancer way better than human experts, although it took a lot of experts in various fields to develop it.
+
+## Then coming to Deep Learning
+This one provided a different approach of using Machine Learning. Deep learning relies on neural networks, a general-purpose function that can solve any problem representable through examples. When you provide a neural network with many labeled examples of a specific kind of data, it’ll be able to extract common patterns between those examples and transform it into a mathematical equation that will help classify future pieces of information.
+
+## Example 
+Creating a facial recognition application with deep learning only requires you to develop or choose a preconstructed algorithm and train it with examples of the faces of the people it must detect. Given enough examples (lots of examples), the neural network will be able to detect faces without further instructions on features or measurements.
+## Deep learning is a very effective method to do computer vision. 
+
+## Compared to previous types of machine learning, deep learning is both easier and faster to develop and deploy.
+Most of current computer vision applications such as cancer detection, self-driving cars and facial recognition make use of deep learning. Deep learning and deep neural networks have moved from the conceptual realm into practical applications thanks to availability and advances in hardware and cloud computing resources.
+
+
+
+
+
+
+
+
+
+
+Source :- TowardsDataScience (https://towardsdatascience.com/everything-you-ever-wanted-to-know-about-computer-vision-heres-a-look-why-it-s-so-awesome-e8a58dfb641e)
