@@ -44,7 +44,41 @@ Creating a facial recognition application with deep learning only requires you t
 ## Compared to previous types of machine learning, deep learning is both easier and faster to develop and deploy.
 Most of current computer vision applications such as cancer detection, self-driving cars and facial recognition make use of deep learning. Deep learning and deep neural networks have moved from the conceptual realm into practical applications thanks to availability and advances in hardware and cloud computing resources.
 
+# Now coming to the Computer Vision
+Computer vision is one of the areas in Machine Learning where core concepts are already being integrated into major products that we use every day. 
 
+## CV In Self-Driving Cars
+But it’s not just tech companies that are leverage Machine Learning for image applications.
+Computer vision enables self-driving cars to make sense of their surroundings. Cameras capture video from different angles around the car and feed it to computer vision software, which then processes the images in real-time to find the extremities of roads, read traffic signs, detect other cars, objects and pedestrians. The self-driving car can then steer its way on streets and highways, avoid hitting obstacles, and (hopefully) safely drive its passengers to their destination.
+## CV In Facial Recognition
+Computer vision also plays an important role in facial recognition applications, the technology that enables computers to match images of people’s faces to their identities. Computer vision algorithms detect facial features in images and compare them with databases of face profiles. Consumer devices use facial recognition to authenticate the identities of their owners. Social media apps use facial recognition to detect and tag users. Law enforcement agencies also rely on facial recognition technology to identify criminals in video feeds.
+## CV In Augmented Reality & Mixed Reality
+Computer vision also plays an important role in augmented and mixed reality, the technology that enables computing devices such as smartphones, tablets and smart glasses to overlay and embed virtual objects on real world imagery. Using computer vision, AR gear detect objects in real world in order to determine the locations on a device’s display to place a virtual object. For instance, computer vision algorithms can help AR applications detect planes such as tabletops, walls and floors, a very important part of establishing depth and dimensions and placing virtual objects in physical world.
+## CV In Healthcare
+Computer vision has also been an important part of advances in health-tech. Computer vision algorithms can help automate tasks such as detecting cancerous moles in skin images or finding symptoms in x-ray and MRI
+
+
+## Challenges of Computer Vision
+Helping computers to see turns out to be very hard.
+Inventing a machine that sees like we do is a deceptively difficult task, not just because it’s hard to make computers do it, but because we’re not entirely sure how human vison works in the first place.
+
+# Many popular computer vision applications involve trying to recognize things in photographs; for example:
+Object Classification: What broad category of object is in this photograph?
+Object Identification: Which type of a given object is in this photograph?
+Object Verification: Is the object in the photograph?
+Object Detection: Where are the objects in the photograph?
+Object Landmark Detection: What are the key points for the object in the photograph?
+Object Segmentation: What pixels belong to the object in the image?
+Object Recognition: What objects are in this photograph and where are they?
+
+# Outside of just recognition, other methods of analysis include:
+Video motion analysis uses computer vision to estimate the velocity of objects in a video, or the camera itself.
+In image segmentation, algorithms partition images into multiple sets of views.
+Scene reconstruction creates a 3D model of a scene inputted through images or video.
+In image restoration, noise such as blurring is removed from photos using Machine Learning based filters.
+
+# Conclusion
+Despite the recent progress, which has been impressive, we’re still not even close to solving computer vision.
 
 
 
