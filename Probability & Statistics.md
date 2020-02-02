@@ -15,7 +15,9 @@ Variance is the measure of dispersion in a data set, or basically how spread out
 `Calculated by-` first finding the deviation of each element in the data set from the mean, and then by squaring it.
 5. Lambda :-
 In python, the lambda keyword to declare an anonymous function, which is why we refer to them as "lambda functions"
-
+6. Frequency: a number describing how often an outcome occurs. Can be a count like 121801, or a ratio like 0.515.
+7. Distribution: A mapping from outcome to frequency for each possible outcome in a sample space.
+8. Probability Distribution: The distribution above, which has been normalized so that the sum of the frequencies is 1.
 
 ## Intermediate
 1. Gaussian Distribution :-
