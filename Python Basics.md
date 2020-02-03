@@ -31,3 +31,10 @@ there is no way we can use indexing to access or delete its elements
 
 ## Python dictionary holds key-value pairs.
 >> mydict = {1:2,2:3,3:4}
+
+
+
+
+
+Source:-
+https://pandas.pydata.org/pandas-docs/stable/getting_started/dsintro.html

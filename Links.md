@@ -6,3 +6,6 @@ Links and toRead documents-
 
  2) Stock Predication with Q-Learning
  https://www.youtube.com/watch?v=rRssY6FrTvU
+
+ 3) Python Basics
+ https://pandas.pydata.org/pandas-docs/stable/getting_started/dsintro.html
