@@ -9,3 +9,6 @@ Links and toRead documents-
 
  3) Python Basics
  https://pandas.pydata.org/pandas-docs/stable/getting_started/dsintro.html
+
+ 4) Removing Null values
+ https://towardsdatascience.com/the-tale-of-missing-values-in-python-c96beb0e8a9d
