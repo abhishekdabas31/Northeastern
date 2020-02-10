@@ -16,6 +16,10 @@ things you can do in a list :-
 5. deleting a list
 >>del languages[2]
 
+## Tuples:
+A tuple is an (immutable) ordered list of values. A tuple is in many ways similar to a list;
+one of the most important differences is that tuples can be used as keys in dictionaries and as elements of sets, while lists cannot.
+
 ## List is mutable, Tuples are not 
 >>> colors = ('red', 'green' , 'blue')
 1. sincle element tuple
@@ -32,8 +36,20 @@ there is no way we can use indexing to access or delete its elements
 ## Python dictionary holds key-value pairs.
 >> mydict = {1:2,2:3,3:4}
 
+# Numpy
+Numpy is the core library for scientific computing in Python. It provides a high-performance multidimensional array object, and tools for working with these arrays.
 
+## Arrays
+A numpy array is a grid of values, all of the same type, and is indexed by a tuple of nonnegative integers. The number of dimensions is the rank of the array; the shape of an array is a tuple of integers giving the size of the array along each dimension.
 
+`
+e = np.random.random((2,2)) 
+print(e)
+[[0.57688929 0.54616642]
+[0.28299089 0.10060504]]
+`
+## Series
+A Series is a one-dimensional array of indexed data. One of the huge benefits of Pandas is that it supports both integer and label-based indexing, and provides a host of methods for performing operations involving the index. The first column is known as an index. And, each of the other columns corresponds to a Series. The first Series is called City, where the Olympics were held. The second Series is called the Edition, and this is the year the Olympics were held, and so on.
 
 
 Source:-

@@ -36,9 +36,12 @@ The highest point is located at the mean, because it coincides with the mode. Th
 We have two main paramters to explain or inform regarding our Gaussian distribution model they are mean and variance. Mean is usually represented by μ and variance with σ² (σ is the standard deviation). The graph is symmetrix about mean for a gaussian distribution. The mean, median and mode are equal
 `While usually modelling a large data it is common that more data is closer to the mean value and the very few or less frequent data is observed towards the extremes, which is nothing but a gaussian distribution that looks like this(μ = 0 and σ = 1):`
 
-The central limit theorem (CLT) establishes that, in some situations, when independent random variables are added, their properly normalized sum tends toward a normal distribution (informally a “bell curve”) even if the original variables themselves are not normally distribute
-### So because of these properities and Central Limit Theorem (CLT), Gaussian distribution is often used in Machine Learning Algorithms.
-### In summary, it is possible to turn most datasets to Gaussian.
+## The central limit theorem (CLT) 
+The central limit theorem (CLT) is simple. It just says that with a large sample size, sample means are normally distributed.
+It is establishes that, when independent random variables are added, their properly normalized sum tends toward a normal distribution (informally a “bell curve”) even if the original variables themselves are not normally distribute.
+CLT just says that when you have roughly 30 or more observations in your sample, the average of those numbers is part of a bell-shaped curve. So if you took a bunch of 30+ sized samples and plotted them, they’d look like the normal distribution pictured above — most of the averages would fall toward the center but you’d get a few observations towards the extremes.
+>> So because of these properities and Central Limit Theorem (CLT), Gaussian distribution is often used in Machine Learning Algorithms.
+>> In summary, it is possible to turn most datasets to Gaussian.
 
 ## Why are They Important to Machine Learning?
 In machine learning, cost function or a neuron potential values are the quantities that are expected to be the sum of many independent processes (such as input features or activation potential of last layer) often have distributions that are nearly normal. One can continue to use parametric statistics knowing gaussian nature of dataset.
@@ -49,7 +52,7 @@ In machine learning, cost function or a neuron potential values are the quantiti
 The first type of probability we will discuss is the joint probability which is the probability of two different events occurring at the same time. Let’s use the diamonds dataset, from ggplot2, as our example dataset. The two different variables we are interested in are diamond colors and cuts. First we will measure the frequency of each type of diamond color-cut combination. We can represent these data using a “two-way table”:
 
 2. Marginal Probabilities
-The second type of probability is the marginal probability. The interesting thing about a marginal probability is that the term sounds complicated, but it’s actually the probability that we are most familiar with. Basically anytime you are in interested in a single event irrespective of any other event (i.e. “marginalizing the other event”), then it is a marginal probability. For instance, the probability of a coin flip giving a head is considered a marginal probability because we aren’t considering any other events. Typically, we just say probability and not the marginal part of it because this part only comes into play when we have to factor in a second event.
+The second type of probability is    the marginal probability. The interesting thing about a marginal probability is that the term sounds complicated, but it’s actually the probability that we are most familiar with. Basically anytime you are in interested in a single event irrespective of any other event (i.e. “marginalizing the other event”), then it is a marginal probability. For instance, the probability of a coin flip giving a head is considered a marginal probability because we aren’t considering any other events. Typically, we just say probability and not the marginal part of it because this part only comes into play when we have to factor in a second event.
 
 3. Conditional Probability
 The final type of probability is the conditional probability. A conditional probability is the probability of an event X occurring when a secondary event Y is true. Mathematically, it is represented as P(X | Y). This is read as “probability of X given/conditioned on Y”.

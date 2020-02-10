@@ -12,3 +12,6 @@ Links and toRead documents-
 
  4) Removing Null values
  https://towardsdatascience.com/the-tale-of-missing-values-in-python-c96beb0e8a9d
+
+ 5) Understanding Generative Adversarial Networks (GANs)
+ https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29
