@@ -1,3 +1,5 @@
+ ## Machine Learning algorithms cannot work directly with categorical data and you do need to do some amount of engineering and transformations on this data before you can start modeling on your data.
+ 
 # Categorical Data
 A categorical data is usually in the form of discrete values which belongs to a specific finite set of categories. 
 These are also known as classes or labels in the contect of attributes or variables which are to be predicted by a model. 
