@@ -16,6 +16,9 @@ Error = (Actual — Prediction)²
 
 ## Since the linear regression model minimizes the squared error the solution is referred to as the least squares solution. This is the name for the combination of A and B that return the minimum squared error over the data set.
 
+# Multiple Linear Regression
+Almost all the real-world problems that you are going to encounter will have more than two variables. Linear regression involving multiple variables is called “multiple linear regression” or multivariate linear regression. The steps to perform multiple linear regression are almost similar to that of simple linear regression. The difference lies in the evaluation. You can use it to find out which factor has the highest impact on the predicted output and how different variables relate to each other.
+
 ## Regression analysis is the science and art of fitting a straight line of pattern into data.
 In a linear regression model, the variable of interest (the so-called “dependent” variable) is predicted from k
 other variables (the so-called “independent” variables) using a linear equation. If Y denotes the
@@ -61,9 +64,12 @@ The coefficient of determination captures how much of the trend in the data set 
 
 
 
+Questions you should ask:
+1. Which predictive model is more appropriate for the problem in hand?
+2. What does the target you are trying to predict look like?
 
-
-
+>If you are trying to predict a continuous target, then you will need a regression model.
+>But if you are trying to predict a discrete target, then you will need a classification model.
 
 
 
@@ -74,3 +80,4 @@ Source:-
 http://people.duke.edu/~rnau/Notes_on_linear_regression_analysis--Robert_Nau.pdf
 3. https://medium.com/@srishtisawla/linear-regression-data-science-algorithm-every-data-scientist-should-know-34d5fcb51c03
 4. https://towardsdatascience.com/understanding-the-fundamentals-of-linear-regression-7e64afd614e1
+5. https://towardsdatascience.com/a-beginners-guide-to-linear-regression-in-python-with-scikit-learn-83a8f7ae2b4f
