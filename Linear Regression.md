@@ -3,8 +3,17 @@
 Linear Regression is the Linear Model that assumes that there is a linear relationship between the independent variable ('x') and dependent variable('Y') such that 'y' can be calculated from a linear combination of imput variables 'x'.
 For single imput variable it is called simple Linear Regression, whereas for multiple imput variables it is called multiple linear regression.
 
+Linear Regression can be considered a Machine Learning algorithm that allows us to map numeric inputs to numeric outputs, fitting a line into the data points.
+
 Incase of 1 imput 'x' and 1 output 'y', there is an output line
 Incase of multiple imputs "x's" the line is replaced by a plane
+
+## Example
+Based on the stock price records of the last couple of years you can predict what the stock price is going to be like. 
+Here is where Linear Regression (LR) comes into play. The essence of LR is to find the line that best fits the data points on the plot, so that we can, more or less, know exactly where the stock price is likely to fall in the year 2021.
+
+# It turns out that, in terms of Linear Regression, “linear” does not refer to “straight line”, but rather to “falling on one line”.
+Linear Regression is the process of finding a line that best fits the data points available on the plot, so that we can use it to predict output values for inputs that are not present in the data set we have, with the belief that those outputs would fall on the line. Performance (and error rates) depends on various factors including the how clean and consistent the data is. There are different ways of improving the performance (i.e. generalizability) of the model. However, each one has its own pros and cons, which makes the choice of methods application-dependent.
 
 >>These two variables are called the independent variable and the dependent variable, and they are given these names for fairly intuitive reasons. The independent variable is so named because the model assumes that it can behave however it likes, and doesn’t depend on the other variable for any reason. The dependent variable is the opposite; the model assumes that it is a direct result of the independent variable, it’s value is highly dependent on the independent variable.
 
@@ -81,3 +90,4 @@ http://people.duke.edu/~rnau/Notes_on_linear_regression_analysis--Robert_Nau.pdf
 3. https://medium.com/@srishtisawla/linear-regression-data-science-algorithm-every-data-scientist-should-know-34d5fcb51c03
 4. https://towardsdatascience.com/understanding-the-fundamentals-of-linear-regression-7e64afd614e1
 5. https://towardsdatascience.com/a-beginners-guide-to-linear-regression-in-python-with-scikit-learn-83a8f7ae2b4f
+6. https://towardsdatascience.com/how-does-linear-regression-actually-work-3297021970dd
