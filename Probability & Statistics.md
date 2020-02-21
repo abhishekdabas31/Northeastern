@@ -36,6 +36,10 @@ The highest point is located at the mean, because it coincides with the mode. Th
 We have two main paramters to explain or inform regarding our Gaussian distribution model they are mean and variance. Mean is usually represented by μ and variance with σ² (σ is the standard deviation). The graph is symmetrix about mean for a gaussian distribution. The mean, median and mode are equal
 `While usually modelling a large data it is common that more data is closer to the mean value and the very few or less frequent data is observed towards the extremes, which is nothing but a gaussian distribution that looks like this(μ = 0 and σ = 1):`
 
+4. . Uniform Distribution
+Perhaps one of the simplest and useful distribution is the uniform distribution.
+Since any interval of numbers of equal width has an equal probability of being observed, the curve describing the distribution is a rectangle, with constant height across the interval and 0 height elsewhere. Since the area under the curve must be equal to 1, the length of the interval determines the height of the curve. The following figure shows a uniform distribution in interval (a,b). Notice since the area needs to be 1. The height is set to 1/(b−a).
+
 ## The central limit theorem (CLT) 
 The central limit theorem (CLT) is simple. It just says that with a large sample size, sample means are normally distributed.
 It is establishes that, when independent random variables are added, their properly normalized sum tends toward a normal distribution (informally a “bell curve”) even if the original variables themselves are not normally distribute.
