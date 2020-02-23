@@ -72,8 +72,182 @@ If your significance level is 0.05, that means that you indeed have a 5% chance 
 Conversely, you could also conclude that your null hypothesis is true or in statistical words, you fail to reject your null hypothesis when in reality it was actually false. This is a case of Type 2 Error. The probability of committing a Type 2 error is explained by Beta — β.
 
 
+## 1. Normality Tests
+This will list statistical tests that you can use to check if your data has a Gaussian distribution.
+
+> 1.1 Shapiro-Wilk Test:
+# Example of the Shapiro-Wilk Normality Test
+`from scipy.stats import shapiro
+data = [0.873, 2.817, 0.121, -0.945, -0.055, -1.436, 0.360, -1.478, -1.637, -1.869]
+stat, p = shapiro(data)
+print('stat=%.3f, p=%.3f' % (stat, p))
+if p > 0.05:
+    print('Probably Gaussian')
+else:
+    print('Probably not Gaussian')`
+
+> 2.2 D’Agostino’s K^2 Test :
+# Example of the D'Agostino's K^2 Normality Test
+`
+from scipy.stats import normaltest
+data = [0.873, 2.817, 0.121, -0.945, -0.055, -1.436, 0.360, -1.478, -1.637, -1.869]
+stat, p = normaltest(data)
+print('stat=%.3f, p=%.3f' % (stat, p))
+if p > 0.05:
+    print('Probably Gaussian')
+else:
+    print('Probably not Gaussian')`
+    
+
+## 2. Correlation Tests
+This section lists statistical tests that you can use to check if two samples are related
+
+> 2.1 Pearson’s Correlation Coefficient
+# generate related variables
+from numpy import mean
+from numpy import std
+from numpy.random import randn
+from numpy.random import seed
+from matplotlib import pyplot
+# seed random number generator
+seed(1)
+# prepare data
+data1 = 20 * randn(1000) + 100
+data2 = data1 + (10 * randn(1000) + 50)
+# summarize
+print('data1: mean=%.3f stdv=%.3f' % (mean(data1), std(data1)))
+print('data2: mean=%.3f stdv=%.3f' % (mean(data2), std(data2)))
+# plot
+pyplot.scatter(data1, data2)
+pyplot.show()
+
+> 2.2 Chi-Squared Test
+# chi-squared test with similar proportions
+from scipy.stats import chi2_contingency
+from scipy.stats import chi2
+# contingency table
+table = [[10, 20, 30],
+         [6,  9,  17]]
+print(table)
+stat, p, dof, expected = chi2_contingency(table)
+print('dof=%d' % dof)
+print(expected)
+
+# interpret test-statistic
+prob = 0.95
+critical = chi2.ppf(prob, dof)
+print('probability=%.3f, critical=%.3f, stat=%.3f' % (prob, critical, stat))
+if abs(stat) >= critical:
+    print('Dependent (reject H0)')
+else:
+    print('Independent (fail to reject H0)')
+
+# # interpret p-value
+alpha = 1.0 - prob
+print('significance=%.3f, p=%.3f' % (alpha, p))
+if p <= alpha:
+    print('Dependent (reject H0)')
+else:
+    print('Independent (fail to reject H0)')
+
+## 3. Parametric Statistical Hypothesis Tests
+
+> 3.1 Student’s t-test:
+# Student's t-test
+from numpy.random import seed
+from numpy.random import randn
+from scipy.stats import ttest_ind
+import matplotlib.pyplot as plt
+# seed the random number generator
+seed(1)
+# generate two independent samples
+data1 = 5 * randn(100) + 50
+data2 = 5 * randn(100) + 51
+
+# compare samples
+stat, p = ttest_ind(data1, data2)
+print('Statistics=%.3f, p=%.3f' % (stat, p))
+# interpret
+alpha = 0.05
+if p > alpha:
+    print('Same distributions (fail to reject H0)')
+else:
+    print('Different distributions (reject H0)')
+
+> 3.2 Paired Student’s t-test:
+
+# Paired Student's t-test
+from numpy.random import seed
+from numpy.random import randn
+from scipy.stats import ttest_rel
+# seed the random number generator
+seed(1)
+# generate two independent samples
+data3 = 5 * randn(100) + 50
+data4 = 5 * randn(100) + 51
+
+# compare samples
+stat, p = ttest_rel(data3, data4)
+print('Statistics=%.3f, p=%.3f' % (stat, p))
+# interpret
+alpha = 0.05
+if p > alpha:
+    print('Same distributions (fail to reject H0)')
+else:
+    print('Different distributions (reject H0)')
+
+> 3.3 ANOVA Test
+The independent t-test is used to compare the means of a condition between 2 groups. ANOVA is used when one wants to compare the means of a condition between 2+ groups.
+ANOVA tests if there is a difference in the mean somewhere in the model (testing if there was an overall effect), but it does not tell one where the difference is if the there is one  
+# Example of the Analysis of Variance Test
+from scipy.stats import f_oneway
+data1 = [0.873, 2.817, 0.121, -0.945, -0.055, -1.436, 0.360, -1.478, -1.637, -1.869]
+data2 = [1.142, -0.432, -0.938, -0.729, -0.846, -0.157, 0.500, 1.183, -1.075, -0.169]
+data3 = [-0.208, 0.696, 0.928, -1.148, -0.213, 0.229, 0.137, 0.269, -0.870, -1.204]
+stat, p = f_oneway(data1, data2, data3)
+print('stat=%.3f, p=%.3f' % (stat, p))
+if p > 0.05:
+    print('Probably the same distribution')
+else:
+    print('Probably different distributions')
 
 
+### 4. Nonparametric Statistical Hypothesis Tests
+
+# generate gaussian data samples
+from numpy.random import seed
+from numpy.random import randn
+from numpy import mean
+from numpy import std
+# seed the random number generator
+seed(1)
+# generate two sets of univariate observations
+data1 = 5 * randn(100) + 50
+data2 = 5 * randn(100) + 51
+# summarize
+print('data1: mean=%.3f stdv=%.3f' % (mean(data1), std(data1)))
+print('data2: mean=%.3f stdv=%.3f' % (mean(data2), std(data2)))
+
+
+> Mann-Whitney U Test
+# Mann-Whitney U test
+from numpy.random import seed
+from numpy.random import randn
+from scipy.stats import mannwhitneyu
+# seed the random number generator
+seed(1)
+# generate two independent samples
+data1 = 5 * randn(100) + 50
+data2 = 5 * randn(100) + 51
+# compare samples
+stat, p = mannwhitneyu(data1, data2)
+print('Statistics=%.3f, p=%.3f' % (stat, p))
+# interpret
+alpha = 0.05
+if p > alpha:
+    print('Same distribution (fail to reject H0)')
+else:
+    print('Different distribution (reject H0)')
 
 Credit :- 
 1. https://towardsdatascience.com/the-only-theorem-data-scientists-need-to-know-a50a263d013c
