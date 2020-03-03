@@ -74,7 +74,42 @@ Conversely, you could also conclude that your null hypothesis is true or in stat
 
 ## 1. Normality Tests
 This will list statistical tests that you can use to check if your data has a Gaussian distribution.
+## Statistical tests for normality (e.g. Shapiro-Wilk test, Anderson-Darling test, scipy.stats.normaltest, etc.)
 
+## Shapiro-Wilk test
+scipy.stats.shapiro https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.shapiro.html
+
+scipy.stats.shapiro scipy.stats.shapiro(x, a=None, reta=False)[source] Perform the Shapiro-Wilk test for normality.
+
+The Shapiro-Wilk test tests the null hypothesis that the data was drawn from a normal distribution.
+
+Parameters:
+x : array_like Array of sample data. a : array_like, optional Array of internal parameters used in the calculation. If these are not given, they will be computed internally. If x has length n, then a must have length n/2. reta : bool, optional Whether or not to return the internally computed a values. The default is False. Returns:
+W : float The test statistic. p-value : float The p-value for the hypothesis test. a : array_like, optional If reta is True, then these are the internally computed “a” values that may be passed into this function on future calls.
+
+## Anderson-Darling test
+scipy.stats.anderson https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.anderson.html
+
+scipy.stats.anderson(x, dist='norm') Anderson-Darling test for data coming from a particular distribution
+
+The Anderson-Darling test is a modification of the Kolmogorov- Smirnov test kstest for the null hypothesis that a sample is drawn from a population that follows a particular distribution. For the Anderson-Darling test, the critical values depend on which distribution is being tested against. This function works for normal, exponential, logistic, or Gumbel (Extreme Value Type I) distributions.
+
+Parameters:
+x : array_like array of sample data dist : {‘norm’,’expon’,’logistic’,’gumbel’,’gumbel_l’, gumbel_r’, ‘extreme1’}, optional the type of distribution to test against. The default is ‘norm’ and ‘extreme1’, ‘gumbel_l’ and ‘gumbel’ are synonyms. Returns:
+statistic : float The Anderson-Darling test statistic critical_values : list The critical values for this distribution significance_level : list The significance levels for the corresponding critical values in percents. The function returns critical values for a differing set of significance levels depending on the distribution that is being tested against.
+
+Note: The critical values are for a given significance level. When we want a smaller significance level, then we have to increase the critical values, assuming we are in the right, upper tail of the distribution.
+
+## scipy.stats.normaltest
+scipy.stats.normaltest https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.normaltest.html scipy.stats.normaltest(a, axis=0) Tests whether a sample differs from a normal distribution.
+
+This function tests the null hypothesis that a sample comes from a normal distribution. It is based on D’Agostino and Pearson’s [R251], [R252] test that combines skew and kurtosis to produce an omnibus test of normality.
+
+Parameters:
+a : array_like The array containing the data to be tested. axis : int or None If None, the array is treated as a single data set, regardless of its shape. Otherwise, each 1-d array along axis axis is tested. Returns:
+k2 : float or array s^2 + k^2, where s is the z-score returned by skewtest and k is the z-score returned by kurtosistest. p-value : float or array A 2-sided chi squared probability for the hypothesis test.
+
+# Examples:- 
 > 1.1 Shapiro-Wilk Test:
 # Example of the Shapiro-Wilk Normality Test
 `from scipy.stats import shapiro
