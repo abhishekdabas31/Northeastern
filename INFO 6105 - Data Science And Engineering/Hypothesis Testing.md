@@ -6,6 +6,9 @@ A statistical hypothesis test is a method of statistical inference. Commonly, tw
 >>Null Hypothesis (H0): Two variables are independent.
 >>Alternate Hypothesis (H1): Two variables are not independent.
 
+## Degree of Freedom
+https://support.minitab.com/en-us/minitab/18/help-and-how-to/statistics/basic-statistics/supporting-topics/tests-of-means/what-are-degrees-of-freedom/
+
 # For the purpose of these tests in general
 Null: Given two sample means are equal
 Alternate: Given two sample means are not equal
